@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\framework">
+      <UniqueIdentifier>{a5e0693e-dbd1-41d1-ae3d-bcbb27845d1d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Model.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\framework\L2DBaseModel.cpp">
+      <Filter>源文件\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\framework\L2DExpressionMotion.cpp">
+      <Filter>源文件\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\framework\L2DEyeBlink.cpp">
+      <Filter>源文件\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\framework\L2DMatrix44.cpp">
+      <Filter>源文件\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\framework\L2DModelMatrix.cpp">
+      <Filter>源文件\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\framework\L2DMotionManager.cpp">
+      <Filter>源文件\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\framework\L2DPhysics.cpp">
+      <Filter>源文件\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\framework\L2DPose.cpp">
+      <Filter>源文件\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\framework\L2DTargetPoint.cpp">
+      <Filter>源文件\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\framework\L2DViewMatrix.cpp">
+      <Filter>源文件\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelSetting.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalConfig.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Define.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Impl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\framework\L2DBaseModel.h">
+      <Filter>源文件\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\framework\L2DExpressionMotion.h">
+      <Filter>源文件\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\framework\L2DEyeBlink.h">
+      <Filter>源文件\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\framework\L2DMatrix44.h">
+      <Filter>源文件\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\framework\L2DModelMatrix.h">
+      <Filter>源文件\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\framework\L2DMotionManager.h">
+      <Filter>源文件\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\framework\L2DPhysics.h">
+      <Filter>源文件\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\framework\L2DPose.h">
+      <Filter>源文件\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\framework\L2DTargetPoint.h">
+      <Filter>源文件\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\framework\L2DViewMatrix.h">
+      <Filter>源文件\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelSetting.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalConfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

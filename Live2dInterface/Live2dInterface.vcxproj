@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8BCA3513-9239-47D4-9556-713E137EB2BA}</ProjectGuid>
+    <RootNamespace>Live2dInterface</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../;../include;../../Classes</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;L2D_TARGET_WIN_GL;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../lib/windows/debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>live2d_opengl.lib;opengl32.lib;detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;L2D_TARGET_WIN_GL;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../;../include;../../Classes</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>live2d_opengl.lib;opengl32.lib;detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../lib/windows/release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\framework\L2DBaseModel.cpp" />
+    <ClCompile Include="..\framework\L2DExpressionMotion.cpp" />
+    <ClCompile Include="..\framework\L2DEyeBlink.cpp" />
+    <ClCompile Include="..\framework\L2DMatrix44.cpp" />
+    <ClCompile Include="..\framework\L2DModelMatrix.cpp" />
+    <ClCompile Include="..\framework\L2DMotionManager.cpp" />
+    <ClCompile Include="..\framework\L2DPhysics.cpp" />
+    <ClCompile Include="..\framework\L2DPose.cpp" />
+    <ClCompile Include="..\framework\L2DTargetPoint.cpp" />
+    <ClCompile Include="..\framework\L2DViewMatrix.cpp" />
+    <ClCompile Include="Define.cpp" />
+    <ClCompile Include="GlobalConfig.cpp" />
+    <ClCompile Include="Impl.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="ModelSetting.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\framework\L2DBaseModel.h" />
+    <ClInclude Include="..\framework\L2DExpressionMotion.h" />
+    <ClInclude Include="..\framework\L2DEyeBlink.h" />
+    <ClInclude Include="..\framework\L2DMatrix44.h" />
+    <ClInclude Include="..\framework\L2DModelMatrix.h" />
+    <ClInclude Include="..\framework\L2DMotionManager.h" />
+    <ClInclude Include="..\framework\L2DPhysics.h" />
+    <ClInclude Include="..\framework\L2DPose.h" />
+    <ClInclude Include="..\framework\L2DTargetPoint.h" />
+    <ClInclude Include="..\framework\L2DViewMatrix.h" />
+    <ClInclude Include="Define.h" />
+    <ClInclude Include="GlobalConfig.h" />
+    <ClInclude Include="Interface.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="ModelSetting.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
